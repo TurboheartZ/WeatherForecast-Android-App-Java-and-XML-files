@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_result" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.zhangxy.weatherforecast.ResultActivity">
+<RelativeLayout android:id="@+id/layout_resultActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button android:id="@+id/btn_moredetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="More Details"/>
+
+    <Button android:id="@+id/btn_viewmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btn_moredetails"
+        android:layout_marginLeft="5dp"
+        android:text="View Map"/>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/btn_viewmap"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"/>
+
+    <ImageButton android:id="@+id/btn_facebook"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/btn_viewmap"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/fb_icon" />
+
+    <ImageView android:id="@+id/weather_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btn_moredetails"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/clear"/>
+
+    <TextView android:id="@+id/weather_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="25dp"
+        android:text="Mostly Cloudy in Los Angeles, CA"/>
+
+    <TextView android:id="@+id/weather_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/weather_summary"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:text="68"/>
+
+    <TextView android:id="@+id/weather_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_summary"
+        android:layout_toRightOf="@+id/weather_temp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:text="F"/>
+
+    <TextView android:id="@+id/weather_temp_lowandhigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_temp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:text="L:48 | H:71"/>
+
+
+    <TextView android:id="@+id/weather_precipitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_temp_lowandhigh"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Precipitation"/>
+    <TextView android:id="@+id/weather_precipitation_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_temp_lowandhigh"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="None"/>
+
+
+    <TextView android:id="@+id/weather_chanceofrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_precipitation"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Chance of Rain"/>
+    <TextView android:id="@+id/weather_chanceofrain_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_precipitation"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="0 %"/>
+
+
+    <TextView android:id="@+id/weather_windspeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_chanceofrain"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Windspeed"/>
+    <TextView android:id="@+id/weather_windspeed_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_chanceofrain"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="1.23 mph"/>
+
+
+    <TextView android:id="@+id/weather_dewpoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_windspeed"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Dew Point"/>
+    <TextView android:id="@+id/weather_dewpoint_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_windspeed"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="31 F"/>
+
+
+    <TextView android:id="@+id/weather_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_dewpoint"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Humidity"/>
+    <TextView android:id="@+id/weather_humidity_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_dewpoint"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="25 %"/>
+
+
+    <TextView android:id="@+id/weather_visibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_humidity"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Visibility"/>
+    <TextView android:id="@+id/weather_visibility_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_humidity"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="10.00 mi"/>
+
+
+    <TextView android:id="@+id/weather_sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_visibility"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Sunrise"/>
+    <TextView android:id="@+id/weather_sunrise_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_visibility"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="6:23 AM"/>
+
+
+    <TextView android:id="@+id/weather_sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_sunrise"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="20dp"
+        android:text="Sunset"/>
+    <TextView android:id="@+id/weather_sunset_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_sunrise"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="20dp"
+        android:text="4:53 PM"/>
+
+
+</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
